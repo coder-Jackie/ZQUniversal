@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZQBlankErrorView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Me3-5i-u3S">
+                    <rect key="frame" x="53" y="133" width="268" height="400"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_不存在.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZCZ-fP-IC7">
+                            <rect key="frame" x="34" y="0.0" width="200" height="170"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzh-o0-wLn">
+                            <rect key="frame" x="0.0" y="165" width="268" height="57.5"/>
+                            <string key="text">抱歉！您查看的内容已经不存在
+   请点击下方按钮返回VIPZQUniversal首页。</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLc-Gd-Jqz">
+                            <rect key="frame" x="36" y="269.5" width="196" height="44"/>
+                            <color key="backgroundColor" red="0.41960784313725491" green="0.33725490196078434" blue="0.7803921568627451" alpha="1" colorSpace="deviceRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="7R0-zu-otB"/>
+                                <constraint firstAttribute="width" constant="196" id="Q7Y-Ln-ycx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <state key="normal" title="返回首页">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="22"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="DxE-4c-nfF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ZCZ-fP-IC7" firstAttribute="top" secondItem="Me3-5i-u3S" secondAttribute="top" id="1Vs-ay-oZv"/>
+                        <constraint firstAttribute="height" constant="400" id="MMg-JF-dBB"/>
+                        <constraint firstItem="ZCZ-fP-IC7" firstAttribute="centerX" secondItem="Me3-5i-u3S" secondAttribute="centerX" id="NXj-5L-QzQ"/>
+                        <constraint firstItem="lzh-o0-wLn" firstAttribute="leading" secondItem="Me3-5i-u3S" secondAttribute="leading" id="WzK-uC-8fc"/>
+                        <constraint firstItem="hLc-Gd-Jqz" firstAttribute="top" secondItem="lzh-o0-wLn" secondAttribute="bottom" constant="47" id="X1w-l9-QB1"/>
+                        <constraint firstAttribute="trailing" secondItem="lzh-o0-wLn" secondAttribute="trailing" id="ZYS-CI-Wzg"/>
+                        <constraint firstItem="hLc-Gd-Jqz" firstAttribute="centerX" secondItem="Me3-5i-u3S" secondAttribute="centerX" id="gBP-p9-SBL"/>
+                        <constraint firstAttribute="width" constant="268" id="nKb-5c-R9V"/>
+                        <constraint firstItem="lzh-o0-wLn" firstAttribute="top" secondItem="ZCZ-fP-IC7" secondAttribute="bottom" constant="-5" id="vNk-Ue-4Te"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Me3-5i-u3S" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dSD-TT-J1h"/>
+                <constraint firstItem="Me3-5i-u3S" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wFY-N0-z3D"/>
+            </constraints>
+            <connections>
+                <outlet property="bgView" destination="Me3-5i-u3S" id="dJj-B7-ib5"/>
+                <outlet property="imgIv" destination="ZCZ-fP-IC7" id="j7K-VJ-EKk"/>
+                <outlet property="tapBtn" destination="hLc-Gd-Jqz" id="fDF-sZ-jX0"/>
+                <outlet property="titleLb" destination="lzh-o0-wLn" id="hCg-Ln-uRj"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_不存在.png" width="200" height="170"/>
+    </resources>
+</document>
